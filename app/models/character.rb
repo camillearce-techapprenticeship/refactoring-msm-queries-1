@@ -10,4 +10,7 @@
 #  movie_id   :integer
 #
 class Character < ApplicationRecord
+  def movie
+  end
+  
 end

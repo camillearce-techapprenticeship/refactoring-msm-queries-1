@@ -82,13 +82,21 @@
     </th>
   </tr>
 
-  <% the_id = @the_director.id %>
-
-  <% matching_movies = Movie.where({ :director_id => the_id }) %>
+  <!-- 
   
-  <% films = matching_movies.order({ :year => :asc }) %>
+  commenting out after creating an instance method that would always do this under Director class
+  
+  **took out the ruby tags since they still run even if they are commented out**
 
-  <% films.each do |a_movie| %>
+  the_id = @the_director.id 
+
+  matching_movies = Movie.where({ :director_id => the_id })  
+  
+
+  films = matching_movies.order({ :year => :asc }) -->
+  
+
+  <% @the_director.filmography.each do |a_movie| %>
   <tr>
     <td>
       <%= a_movie.id %>
